@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "circleDistancePct.app"
-               BlueprintName = "circleDistancePct"
-               ReferencedContainer = "container:circleDistancePct.xcodeproj">
+               BuildableName = "1_rectangleInterpolate.app"
+               BlueprintName = "w1-1_linearInterpolate_speed_position"
+               ReferencedContainer = "container:w1-1_linearInterpolate_speed_position.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,9 +32,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "circleDistancePct.app"
-            BlueprintName = "circleDistancePct"
-            ReferencedContainer = "container:circleDistancePct.xcodeproj">
+            BuildableName = "1_rectangleInterpolate.app"
+            BlueprintName = "w1-1_linearInterpolate_speed_position"
+            ReferencedContainer = "container:w1-1_linearInterpolate_speed_position.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -44,15 +44,16 @@
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "circleDistancePct.app"
-            BlueprintName = "circleDistancePct"
-            ReferencedContainer = "container:circleDistancePct.xcodeproj">
+            BuildableName = "1_rectangleInterpolate.app"
+            BlueprintName = "w1-1_linearInterpolate_speed_position"
+            ReferencedContainer = "container:w1-1_linearInterpolate_speed_position.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -68,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "circleDistancePct.app"
-            BlueprintName = "circleDistancePct"
-            ReferencedContainer = "container:circleDistancePct.xcodeproj">
+            BuildableName = "1_rectangleInterpolate.app"
+            BlueprintName = "w1-1_linearInterpolate_speed_position"
+            ReferencedContainer = "container:w1-1_linearInterpolate_speed_position.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

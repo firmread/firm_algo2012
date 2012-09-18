@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
                BuildableName = "1_rectangleInterpolate.app"
-               BlueprintName = "1_rectangleInterpolate"
-               ReferencedContainer = "container:1_rectangleInterpolate.xcodeproj">
+               BlueprintName = "w1-1_linearInterpolate_speed_position"
+               ReferencedContainer = "container:w1-1_linearInterpolate_speed_position.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,8 +33,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
             BuildableName = "1_rectangleInterpolate.app"
-            BlueprintName = "1_rectangleInterpolate"
-            ReferencedContainer = "container:1_rectangleInterpolate.xcodeproj">
+            BlueprintName = "w1-1_linearInterpolate_speed_position"
+            ReferencedContainer = "container:w1-1_linearInterpolate_speed_position.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -44,6 +44,7 @@
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
+      ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
@@ -51,8 +52,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
             BuildableName = "1_rectangleInterpolate.app"
-            BlueprintName = "1_rectangleInterpolate"
-            ReferencedContainer = "container:1_rectangleInterpolate.xcodeproj">
+            BlueprintName = "w1-1_linearInterpolate_speed_position"
+            ReferencedContainer = "container:w1-1_linearInterpolate_speed_position.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,8 +70,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
             BuildableName = "1_rectangleInterpolate.app"
-            BlueprintName = "1_rectangleInterpolate"
-            ReferencedContainer = "container:1_rectangleInterpolate.xcodeproj">
+            BlueprintName = "w1-1_linearInterpolate_speed_position"
+            ReferencedContainer = "container:w1-1_linearInterpolate_speed_position.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

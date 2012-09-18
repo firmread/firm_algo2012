@@ -100,7 +100,8 @@ void testApp::draw(){
     ofDrawBitmapString("17.95 inch per second", 85, ofGetHeight()*2/3 + 55);
     ofDrawBitmapString("1.02 mile per hour", 85, ofGetHeight()*2/3 + 65);
     
-    ofDrawBitmapString("press F to fullscreen", 85, ofGetHeight()-20);
+    ofDrawBitmapString("press F to fullscreen", 85, ofGetHeight()-10);
+    ofDrawBitmapString("press R to reset", 85, ofGetHeight()-20);
     
     ofSetColor( 0);
     if (counter%2 ==1) {
@@ -129,6 +130,9 @@ void testApp::keyPressed  (int key){
 		}
         */
 	}
+    if(key == 'r'|| key == 'R'){
+        counter = 0;
+    }
 }
 
 //--------------------------------------------------------------
