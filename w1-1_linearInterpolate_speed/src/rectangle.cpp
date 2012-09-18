@@ -10,7 +10,7 @@ rectangle::rectangle(){
 void rectangle::draw() {
 	ofFill();
 	ofSetRectMode(OF_RECTMODE_CENTER); // center around the position
-    ofSetColor(198,246,55);
+    ofSetColor(255);
     ofRect(pos.x, pos.y, 30,30);
 }
 

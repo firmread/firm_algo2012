@@ -10,12 +10,13 @@ void testApp::setup(){
 	
 	ofSetVerticalSync(true);
     ofSetFrameRate(60);
+    ofEnableAlphaBlending();
     
     ofSetWindowShape(1500, 500);
 	
 	// set background: 
 	
-	ofBackground(50,50,50);
+	ofBackground(41,171,226);
     
 	// set the "a" and "b" positions of the rectangle...
     
@@ -38,6 +39,7 @@ void testApp::setup(){
 	fastPct = 0;							// a variable we can alter...
 	
 	
+    algologo.loadImage("algologo.png");
 } 
 
 //--------------------------------------------------------------
@@ -45,7 +47,7 @@ void testApp::update(){
     
 	// to see pct in the console
 	//printf("%f \n", pct);
-	 
+
     
 	//slowest speed
     slowPct += 0.00001f;
@@ -80,23 +82,22 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-    /*
-    ofSetColor(255, 255, 255);
-    ofSetLineWidth(1);
-    ofLine(startPoint.x, startPoint.y, endPoint.x, endPoint.y);
     
-    ofSetColor(155, 155, 155);
-    ofSetLineWidth(3);
-    
-    ofCircle(startPoint.x, startPoint.y, 5);
-    ofCircle(endPoint.x, endPoint.y, 5);
-     
-     */
+    ofSetRectMode(OF_RECTMODE_CORNER);
+    algologo.draw(85,20, ((ofGetHeight()/3)-50)*algologo.width/algologo.height, (ofGetHeight()/3)-50);
+    ofSetRectMode(OF_RECTMODE_CENTER);
     
 	slowRect.draw();
     fastRect.draw();
     
-    ofDrawBitmapString("0.005 inch per second", 100, 100);
+    ofDrawBitmapString("Fastest non moving speed", 85, ofGetHeight()/3 + 40);
+    ofDrawBitmapString("0.005 inch per second", 85, ofGetHeight()/3 + 55);
+    ofDrawBitmapString("0.0002868 mile per hour", 85, ofGetHeight()/3 + 65);
+    
+    ofDrawBitmapString("Fastest still perceptible speed", 85, ofGetHeight()*2/3 + 40);
+    ofDrawBitmapString("17.95 inch per second", 85, ofGetHeight()*2/3 + 55);
+    ofDrawBitmapString("1.02 mile per hour", 85, ofGetHeight()*2/3 + 65);
+    
 }
 
 //--------------------------------------------------------------
