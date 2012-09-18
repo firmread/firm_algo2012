@@ -9,46 +9,112 @@ void testApp::setup(){
 	// this fixes that: 
 	
 	ofSetVerticalSync(true);
+    ofSetFrameRate(60);
+    
+    ofSetWindowShape(1500, 500);
 	
 	// set background: 
 	
-	ofBackground(30,30,30);
-	
-	
+	ofBackground(50,50,50);
+    
 	// set the "a" and "b" positions of the rectangle...
+    
 	
-	myRectangle.posa.x = 10;
-	myRectangle.posa.y = 100;
-	myRectangle.posb.x = 500;
-	myRectangle.posb.y = 140;
-	myRectangle.interpolateByPct(0);	// start at 0 pct
-	pct = 0;							// a variable we can alter...
+	slowRect.posa.x = 100;
+	slowRect.posa.y = ofGetHeight()/3;
+    slowRect.posb.x = ofGetWidth()-100;
+	slowRect.posb.y = ofGetHeight()/3;
+    
+	slowRect.interpolateByPct(0);           // start at 0 pct
+	slowPct = 0;							// a variable we can alter...
 	
+    
+	fastRect.posa.x = 100;
+	fastRect.posa.y = ofGetHeight()*2/3;
+    fastRect.posb.x = ofGetWidth()-100;
+	fastRect.posb.y = ofGetHeight()*2/3;
+    
+	fastRect.interpolateByPct(0);           // start at 0 pct
+	fastPct = 0;							// a variable we can alter...
 	
 	
 } 
 
 //--------------------------------------------------------------
 void testApp::update(){
-	
+    
 	// to see pct in the console
 	//printf("%f \n", pct);
 	 
-	pct += 0.001f;							// increase by a certain amount
-	if (pct > 1) {
-		pct = 0;							// just between 0 and 1 (0% and 100%)
+    
+	//slowest speed
+    slowPct += 0.00001f;
+	
+    if (fastPct > 1) {
+		slowPct = 0;						// just between 0 and 1 (0% and 100%)
+	}
+	slowRect.interpolateByPct(slowPct);		// go between pta and ptb
+    
+	//fastest speed
+    fastPct += 0.05f;
+	
+    if (fastPct > 1) {
+		fastPct = 0;						// just between 0 and 1 (0% and 100%)
 	}	
-	myRectangle.interpolateByPct(pct);		// go between pta and ptb
+	fastRect.interpolateByPct(fastPct);		// go between pta and ptb
 
+        
+    // refresh window relative position
+	slowRect.posa.x = 100;
+	slowRect.posa.y = ofGetHeight()/3;
+    slowRect.posb.x = ofGetWidth()-100;
+	slowRect.posb.y = ofGetHeight()/3;
+    
+    
+	fastRect.posa.x = 100;
+	fastRect.posa.y = ofGetHeight()*2/3;
+    fastRect.posb.x = ofGetWidth()-100;
+	fastRect.posb.y = ofGetHeight()*2/3;
+    
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	myRectangle.draw();
+    /*
+    ofSetColor(255, 255, 255);
+    ofSetLineWidth(1);
+    ofLine(startPoint.x, startPoint.y, endPoint.x, endPoint.y);
+    
+    ofSetColor(155, 155, 155);
+    ofSetLineWidth(3);
+    
+    ofCircle(startPoint.x, startPoint.y, 5);
+    ofCircle(endPoint.x, endPoint.y, 5);
+     
+     */
+    
+	slowRect.draw();
+    fastRect.draw();
+    
+    ofDrawBitmapString("0.005 inch per second", 100, 100);
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed  (int key){
+    
+
+    if(key == 'f'||key == 'F'){
+		ofToggleFullscreen();
+        
+        /*
+        bFullscreen = !bFullscreen;
+		if(!bFullscreen){
+			ofSetFullscreen(false);
+		} else if(bFullscreen == 1){
+			ofSetFullscreen(true);
+		}
+        */
+	}
 }
 
 //--------------------------------------------------------------

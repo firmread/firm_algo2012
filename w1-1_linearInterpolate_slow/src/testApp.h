@@ -20,11 +20,10 @@ class testApp : public ofSimpleApp{
 		void mousePressed(int x, int y, int button);
 		void mouseReleased();
 
-		rectangle	myRectangle;
+		rectangle	slowRect,fastRect;
 		
-		float		pct;
-	
-	
+		float		slowPct,fastPct;
+        bool        bFullscreen;
 };
 
 #endif
