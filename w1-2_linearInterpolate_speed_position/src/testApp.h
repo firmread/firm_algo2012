@@ -24,6 +24,7 @@ class testApp : public ofSimpleApp{
 		
 		float		slowPct,fastPct;
         bool        bFullscreen;
+        int         counter;
     
         ofImage     algologo;
 };

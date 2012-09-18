@@ -40,6 +40,7 @@ void testApp::setup(){
 	
 	
     algologo.loadImage("algologo.png");
+    counter = 0;
 } 
 
 //--------------------------------------------------------------
@@ -72,11 +73,12 @@ void testApp::update(){
     slowRect.posb.x = ofGetWidth()-100;
 	slowRect.posb.y = ofGetHeight()/3;
     
-    
-	fastRect.posa.x = 100;
-	fastRect.posa.y = ofGetHeight()*2/3;
-    fastRect.posb.x = ofGetWidth()-100;
-	fastRect.posb.y = ofGetHeight()*2/3;
+    if (counter == 0) {
+        fastRect.posa.x = 100;
+        fastRect.posa.y = ofGetHeight()*2/3;
+        fastRect.posb.x = ofGetWidth()-100;
+        fastRect.posb.y = ofGetHeight()*2/3;
+    }
     
 }
 
@@ -97,6 +99,17 @@ void testApp::draw(){
     ofDrawBitmapString("Fastest still perceptible speed", 85, ofGetHeight()*2/3 + 40);
     ofDrawBitmapString("17.95 inch per second", 85, ofGetHeight()*2/3 + 55);
     ofDrawBitmapString("1.02 mile per hour", 85, ofGetHeight()*2/3 + 65);
+    
+    ofDrawBitmapString("press F to fullscreen", 85, ofGetHeight()-20);
+    
+    ofSetColor( 0);
+    if (counter%2 ==1) {
+        ofDrawBitmapString("click to move start point", 85, ofGetHeight()-30);
+    }
+    if (counter%2 ==0) {
+        ofDrawBitmapString("click to move end point", 85, ofGetHeight()-30);
+    }
+    ofSetColor(255);
     
 }
 
@@ -133,6 +146,19 @@ void testApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
 	
+    counter++;
+    
+    
+    if (counter%2 == 1) {
+        fastRect.posb.x = mouseX;
+        fastRect.posb.y = mouseY;
+    }
+    
+    if (counter%2 == 0) {
+        fastRect.posa.x = mouseX;
+        fastRect.posa.y = mouseY;
+    }
+    
 	//myRectangle.posa.x = x;
 	//myRectangle.posa.y = y;
 	

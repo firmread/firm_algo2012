@@ -27,6 +27,9 @@ public:
         pct = (distance - innerRadius) / (outerRadius - innerRadius);
         pct = ofClamp(pct, 0,1);
         
+        
+        ofSetCircleResolution(10*pct);
+        
     }
 
     void draw(){
@@ -49,7 +52,7 @@ vector < circleSpot > spots;
 //--------------------------------------------------------------
 void testApp::setup(){
 
-    ofSetCircleResolution(100);
+    //ofSetCircleResolution(100);
     //s.setup();
     for (int i = 0; i < 1000; i++){
         circleSpot c;
@@ -77,6 +80,10 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
+    
+    if(key == 'f'||key == 'F'){
+		ofToggleFullscreen();
+    }
 
 }
 
