@@ -1,6 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
+#include "circleObject.h"
+#include "circleBg.h"
 
 class testApp : public ofBaseApp{
 
@@ -18,5 +20,10 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+    
+        circleObject myCircles[100];
+        float pct;
+    
+        circleBg s;
+        vector <circleBg> spots;
 };
