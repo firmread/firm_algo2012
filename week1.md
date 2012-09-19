@@ -6,8 +6,8 @@ make a flip book.  Please use a “thicker” type sketchbook.  I recommend the 
 
 ###2]
 make three recordings (using a handheld camera that’s sationary) of three different scenes which have interesting motion.  Pick one point to watch during the video, and sketch out it’s motion path.  Try to find both rhythmic (repetitive) and organic motions.
-[Here is the first video](http://youtu.be/pUa7wKBopLM)
-and [the second video](http://youtu.be/JKhYQE8U_5k)
+
+##[Here is the first video](http://youtu.be/pUa7wKBopLM) and [the second video](http://youtu.be/JKhYQE8U_5k)
 
 
 ###code:
