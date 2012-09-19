@@ -14,7 +14,7 @@ This class will look at the fundamentals of animation and animated form through 
 
 
 
-## Links
+### Links
 
 [GitHub](https://github.com/ofZach/algo2012)
 
@@ -24,22 +24,18 @@ This class will look at the fundamentals of animation and animated form through 
  
  
 
-# week 1 assignment
+## week 1 assignment
 =============
 
-###1]
+###1 ] [Flipbook animation](http://youtu.be/XRVpBauINiY)
 make a flip book.  Please use a “thicker” type sketchbook.  I recommend the square sketchbooks from NY Central Art Supply.
 
-###[Flipbook animation](http://youtu.be/XRVpBauINiY)
-
-###2]
+###2 ] [Motion Tracking - 14th Street Station](http://youtu.be/pUa7wKBopLM) and [Pratt Brooklyn Campus](http://youtu.be/JKhYQE8U_5k)
 make three recordings (using a handheld camera that’s sationary) of three different scenes which have interesting motion.  Pick one point to watch during the video, and sketch out it’s motion path.  Try to find both rhythmic (repetitive) and organic motions.
 
-###[Motion Tracking - 14th Street Station](http://youtu.be/pUa7wKBopLM)
-###[Motion Tracking - Pratt Brooklyn Campus](http://youtu.be/JKhYQE8U_5k)
 
 
-###code:
+###3 ] code:
 
 ###a-c is included in [w1-1_linearInterpolate_speed_position](https://github.com/firmread/firm_algo2012/tree/master/w1-1_linearInterpolate_speed_position)
 
