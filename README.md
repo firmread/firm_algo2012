@@ -20,6 +20,20 @@ This class will look at the fundamentals of animation and animated form through 
 
 [Blog](http://scriptogr.am/algo2012)
 
+### Git sidenotes
+
+to get a classroom repo working
+
+a) clone the algo2012_students repo
+
+b) run this command: 
+   git pull && git submodule init && git submodule update && git submodule status
+
+c) run this command: 
+   git submodule foreach git checkout master
+
+d) sync! 
+   git submodule foreach git pull
  
  
  
