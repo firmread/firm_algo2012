@@ -38,7 +38,7 @@ d) sync!
  
  
 
-## week 1 assignment
+## Week 1 assignment
 =============
 
 ###1 ] [Flipbook animation](http://youtu.be/XRVpBauINiY)
@@ -90,3 +90,33 @@ If you are really feeling like showing off, make an array of xeno objects where 
 in class, we used powf to shape a linear signal.  there are more advanced ways to do this (for easing and out, and for snap to, etc).  Some of these have been collected by robert penner as “easing equations”.  some folks have ported this from AS to c++, you can find them here & here  (I'll add these links to the blog, but google cppPennerEasing and ofxEasingFunc).  Also google "golan shaper function" he's agressive catalogued alot of these. 
 
 try to hook them up and make a compelling composition with linear and nonlinear animating elements.
+
+
+##Week 2 assignment
+=============
+###animation experiment
+Based on the work of Robin Rhode, make an animation with still images. If you can, cross fade between them. Can you tell a story with just a few frames? Think especially of using people and or mixing scales. Don’t doctor the images, and keep the camera stationary.
+
+more robin rhode info: here here
+
+###code homework
+####a) make a composition using the animation techniques that is a tribute to john whitney.
+See for example:
+
+profile, info, videos, catalog (made in 1961! non-digital!)
+
+####b) visuals + music
+Since we talked briefly in class about this idea of a relationship between sound and visual synthesis (and harmony) find a short piece of music (can be any duration as long as there are multiple notes – a short snippet, or a long song) and make a composition that is a visual equivalent of that sound. Think about how the make a visual equivalent using the techniques we talked about this week. Post both the sound and the resulting animation. Try to bring out some essential truth of the audio through the visualization.
+
+####c) natual phenomenon
+try to use sin and cos to emulate a natural phenomenon (ie, something you see in the natural world). be sure to provide some documentation (video / picture / text) of what this phenomenon is.
+
+####d) xeno atan creature
+extend the xeno / atan2 code, making a creature which follows the mouse. think of how you could use sinusoidal animation techniques to give the object some “life” – breathing, blinking, etc.
+
+(advanced homework)
+
+####e) synthesis
+since we talked about amplitude modulation in relationship to sin/cos animation, see if you can implement visual equivalents of other synthesis techniques, such as FM synthesis (modulating the carrier frequency) or additive synthesis. Make an interesting composition with what you’ve implemented.
+
+finally, remember: every homework assignment is an opportunity for genius.
