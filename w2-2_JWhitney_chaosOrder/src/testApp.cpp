@@ -8,6 +8,9 @@
  This piece depend on the idea of xeno, 
  it try to smooth out randomness and it can work at full power at the middle of the canvas.
  
+ in the context of window installation, it may take input from wind
+ where it blow into random mode when the wind pass by.
+ 
 */
 
 #include "testApp.h"
