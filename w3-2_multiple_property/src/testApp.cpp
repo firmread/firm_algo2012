@@ -7,26 +7,33 @@ void testApp::setup(){
     ofEnableAlphaBlending();
 	ofSetVerticalSync(true);
     ofSetFrameRate(60);
+    ofSetCircleResolution(100);
 	
-	ofBackground(40);
+    ofColor c(94, 166, 250);
+	cbg = c;
 	TPR.setup();
     
     for (int i = 0; i < TPRs.size(); i++) {
         TPRs[i].setup();
     }
 	playbackStartTime = 0;
+    brownLoop.loadSound("brown.mp3");
+    brownLoop.setVolume(0);
+    brownLoop.setLoop(true);
+    brownLoop.play();
 	
+    ofSetLineWidth(1.2);
 }
 
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+    ofBackground(cbg);
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
+    
 	
 	// -------------------------- draw the line
 	TPR.draw();
@@ -47,10 +54,8 @@ void testApp::draw(){
 		
 		// since velocity is a line, we want to know how long it is. 
 		float lengthOfVel = ofDist(0,0,vel.x, vel.y);
-		
-		ofFill();
-		ofSetColor(255,0,0);
-		ofCircle(pos.x, pos.y, 2 + lengthOfVel/5.0);
+        float angle = atan2(vel.y, vel.x);
+
 		
 	}
     
@@ -70,41 +75,63 @@ void testApp::draw(){
             ofPoint vel = TPRs[i].getVelocityForTime(timeToCheck);
             
             float lengthOfVel = ofDist(0,0,vel.x, vel.y);
-            
-            ofFill();
-            ofSetColor(255,0,0);
-            ofCircle(pos.x, pos.y, 2 + lengthOfVel/5.0);
-            
+            float angle = atan2(vel.y, vel.x);
             
             //set each one to different parameter
             
             if (i == 0) {
-                ofFill();
-                ofSetColor(255,0,0);
-                ofCircle(pos.x, pos.y, 2 + lengthOfVel/5.0);
+                
+                float brownVolumn = ofMap(lengthOfVel, 0, 200, 0, 1);
+                brownLoop.setVolume(brownVolumn);
+                
+                float pitch = ofMap(pos.y, 0, (float)ofGetHeight(), 2.0, 0.1);
+                brownLoop.setSpeed(pitch);
+                
+                float pan = ofMap(pos.x, 0, (float)ofGetWidth(), -1,1);
+                brownLoop.setPan(pan);
+                
+                
+                ofColor c(200);
+                elasEllipse current;
+                current.draw(pos.x, pos.y, c, lengthOfVel, angle);
             }
-            
+//            94 166 250
             if (i == 1) {
-                ofFill();
-                ofSetColor(0,255,0);
-                ofCircle(pos.x, pos.y, 2 + lengthOfVel/5.0);
-            }
-            if (i == 2) {
-                ofFill();
-                ofSetColor(0,0,255);
-                ofCircle(pos.x, pos.y, 2 + lengthOfVel/5.0);
+                
+                cbg.r = ofMap(lengthOfVel, 0, 200, 70 , 100);
+                cbg.g = ofMap(pos.x, 0, (float)ofGetWidth(), 100, 170);
+                cbg.b = ofMap(pos.y, 0, (float)ofGetHeight(), 200, 250);
+                
+                ofColor c(47, 82, 120);
+                elasEllipse current;
+                current.draw(pos.x, pos.y, c, lengthOfVel, angle);
             }
             
-            if (i == 3) {
-                ofFill();
-                ofSetColor(255,0,255);
-                ofCircle(pos.x, pos.y, 2 + lengthOfVel/5.0);
-            }
-            if (i == 4) {
-                ofFill();
-                ofSetColor(255,255,0);
-                ofCircle(pos.x, pos.y, 2 + lengthOfVel/5.0);
-            }
+            
+//            if (i == 2) {
+//                
+//                
+//                cbg.g = ofMap(lengthOfVel, 0, 200, 130, 160);
+//                
+//                ofColor c(97,166,250);
+//                elasEllipse current;
+//                current.draw(pos.x, pos.y, c, lengthOfVel, angle);
+//            }
+//            
+//            if (i == 3) {
+//                
+//                
+//                cbg.b = ofMap(lengthOfVel, 0, 200, 240, 255);
+//                
+//                ofColor c(240,224,70);
+//                elasEllipse current;
+//                current.draw(pos.x, pos.y, c, lengthOfVel, angle);
+//            }
+//            if (i == 4) {
+//                ofColor c(205,115,40);
+//                elasEllipse current;
+//                current.draw(pos.x, pos.y, c, lengthOfVel, angle);
+//            }
             
             
             
@@ -151,7 +178,7 @@ void testApp::mouseReleased(int x, int y, int button){
 	playbackStartTime = ofGetElapsedTimef();
     TPR.clear();
     
-    if (TPRs.size()> 5) {
+    if (TPRs.size()> 2) {
         TPRs.erase(TPRs.begin());
         playbackStartTimeEach.erase(playbackStartTimeEach.begin());
     }

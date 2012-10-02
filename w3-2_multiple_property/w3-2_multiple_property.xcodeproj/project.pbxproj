@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0a462ecdec7f00739592d22fc5c52c1f /* timePoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = af4085529447035111dbaf14be1a43f3 /* timePoint.cpp */; };
 		0cd5b188776788c7a0be49363dac5038 /* timePointRecorder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5ca171253019f97d0e1ef921b28f2b90 /* timePointRecorder.cpp */; };
+		471A94FB161B124F001BB0F0 /* elasEllipse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 471A94F9161B124E001BB0F0 /* elasEllipse.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -59,6 +59,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		471A94F9161B124E001BB0F0 /* elasEllipse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = elasEllipse.cpp; sourceTree = "<group>"; };
+		471A94FA161B124F001BB0F0 /* elasEllipse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = elasEllipse.h; sourceTree = "<group>"; };
 		5ca171253019f97d0e1ef921b28f2b90 /* timePointRecorder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = timePointRecorder.cpp; path = src/timePointRecorder.cpp; sourceTree = SOURCE_ROOT; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -81,7 +83,6 @@
 		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		af4085529447035111dbaf14be1a43f3 /* timePoint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = timePoint.cpp; path = src/timePoint.cpp; sourceTree = SOURCE_ROOT; };
 		b95f888a0ff991066ab3ac9bb484c7a5 /* timePointRecorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = timePointRecorder.h; path = src/timePointRecorder.h; sourceTree = SOURCE_ROOT; };
 		f016ecba48cdca4cf8e62b9ae42a7b70 /* timePoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = timePoint.h; path = src/timePoint.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -181,10 +182,11 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
-				af4085529447035111dbaf14be1a43f3 /* timePoint.cpp */,
 				f016ecba48cdca4cf8e62b9ae42a7b70 /* timePoint.h */,
 				5ca171253019f97d0e1ef921b28f2b90 /* timePointRecorder.cpp */,
 				b95f888a0ff991066ab3ac9bb484c7a5 /* timePointRecorder.h */,
+				471A94F9161B124E001BB0F0 /* elasEllipse.cpp */,
+				471A94FA161B124F001BB0F0 /* elasEllipse.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -284,8 +286,8 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
-				0a462ecdec7f00739592d22fc5c52c1f /* timePoint.cpp in Sources */,
 				0cd5b188776788c7a0be49363dac5038 /* timePointRecorder.cpp in Sources */,
+				471A94FB161B124F001BB0F0 /* elasEllipse.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

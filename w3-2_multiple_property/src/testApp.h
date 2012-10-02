@@ -5,6 +5,7 @@
 #include "ofMain.h"
 #include "timePoint.h"
 #include "timePointRecorder.h"
+#include "elasEllipse.h"
 
 class testApp : public ofBaseApp{
 
@@ -22,13 +23,14 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 
 		
-		timePointRecorder		TPR;
-		float					playbackStartTime;
+		timePointRecorder           TPR;
+		float                       playbackStartTime;
 		
-    vector <timePointRecorder>  TPRs;
-    vector <float>              playbackStartTimeEach;
+        vector <timePointRecorder>  TPRs;
+        vector <float>              playbackStartTimeEach;
 
-	
+        ofSoundPlayer  brownLoop;
+        ofColor cbg;
 };
 
 #endif
