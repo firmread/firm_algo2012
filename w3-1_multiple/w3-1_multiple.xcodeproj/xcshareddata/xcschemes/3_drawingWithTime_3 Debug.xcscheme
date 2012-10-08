@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "3_drawingWithTime_3.app"
+               BuildableName = "w3-1_multiple.app"
                BlueprintName = "w3-1_multiple"
                ReferencedContainer = "container:w3-1_multiple.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "3_drawingWithTime_3.app"
+            BuildableName = "w3-1_multiple.app"
             BlueprintName = "w3-1_multiple"
             ReferencedContainer = "container:w3-1_multiple.xcodeproj">
          </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "3_drawingWithTime_3.app"
+            BuildableName = "w3-1_multiple.app"
             BlueprintName = "w3-1_multiple"
             ReferencedContainer = "container:w3-1_multiple.xcodeproj">
          </BuildableReference>
@@ -69,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "3_drawingWithTime_3.app"
+            BuildableName = "w3-1_multiple.app"
             BlueprintName = "w3-1_multiple"
             ReferencedContainer = "container:w3-1_multiple.xcodeproj">
          </BuildableReference>

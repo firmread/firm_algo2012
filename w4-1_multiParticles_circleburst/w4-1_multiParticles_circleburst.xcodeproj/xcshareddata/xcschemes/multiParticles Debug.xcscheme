@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "w3-2_multiple_property.app"
-               BlueprintName = "w3-2_multiple_property"
-               ReferencedContainer = "container:w3-2_multiple_property.xcodeproj">
+               BuildableName = "w4-1_multiParticles_circleburst.app"
+               BlueprintName = "w4-1_multiParticles_circleburst"
+               ReferencedContainer = "container:w4-1_multiParticles_circleburst.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,9 +32,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w3-2_multiple_property.app"
-            BlueprintName = "w3-2_multiple_property"
-            ReferencedContainer = "container:w3-2_multiple_property.xcodeproj">
+            BuildableName = "w4-1_multiParticles_circleburst.app"
+            BlueprintName = "w4-1_multiParticles_circleburst"
+            ReferencedContainer = "container:w4-1_multiParticles_circleburst.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w3-2_multiple_property.app"
-            BlueprintName = "w3-2_multiple_property"
-            ReferencedContainer = "container:w3-2_multiple_property.xcodeproj">
+            BuildableName = "w4-1_multiParticles_circleburst.app"
+            BlueprintName = "w4-1_multiParticles_circleburst"
+            ReferencedContainer = "container:w4-1_multiParticles_circleburst.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w3-2_multiple_property.app"
-            BlueprintName = "w3-2_multiple_property"
-            ReferencedContainer = "container:w3-2_multiple_property.xcodeproj">
+            BuildableName = "w4-1_multiParticles_circleburst.app"
+            BlueprintName = "w4-1_multiParticles_circleburst"
+            ReferencedContainer = "container:w4-1_multiParticles_circleburst.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

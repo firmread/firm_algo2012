@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "w3-2_multiple_property.app"
-               BlueprintName = "w3-2_multiple_property"
-               ReferencedContainer = "container:w3-2_multiple_property.xcodeproj">
+               BuildableName = "w4-1_multiParticles_circleburst.app"
+               BlueprintName = "w4-1_multiParticles_circleburst"
+               ReferencedContainer = "container:w4-1_multiParticles_circleburst.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -25,16 +25,16 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      buildConfiguration = "Release">
       <Testables>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w3-2_multiple_property.app"
-            BlueprintName = "w3-2_multiple_property"
-            ReferencedContainer = "container:w3-2_multiple_property.xcodeproj">
+            BuildableName = "w4-1_multiParticles_circleburst.app"
+            BlueprintName = "w4-1_multiParticles_circleburst"
+            ReferencedContainer = "container:w4-1_multiParticles_circleburst.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -43,7 +43,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w3-2_multiple_property.app"
-            BlueprintName = "w3-2_multiple_property"
-            ReferencedContainer = "container:w3-2_multiple_property.xcodeproj">
+            BuildableName = "w4-1_multiParticles_circleburst.app"
+            BlueprintName = "w4-1_multiParticles_circleburst"
+            ReferencedContainer = "container:w4-1_multiParticles_circleburst.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -63,23 +63,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "w3-2_multiple_property.app"
-            BlueprintName = "w3-2_multiple_property"
-            ReferencedContainer = "container:w3-2_multiple_property.xcodeproj">
+            BuildableName = "w4-1_multiParticles_circleburst.app"
+            BlueprintName = "w4-1_multiParticles_circleburst"
+            ReferencedContainer = "container:w4-1_multiParticles_circleburst.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Release">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
