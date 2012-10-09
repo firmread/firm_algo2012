@@ -4,8 +4,8 @@
 
 //------------------------------------------------------------
 particle::particle(){
-	setInitialCondition(0,0,0,0,0);
-	damping = 0.001f;
+	setInitialCondition(0,0,0,0);
+	damping = 0.01f;
 }
 
 //------------------------------------------------------------
@@ -34,10 +34,9 @@ void particle::addDampingForce(){
 }
 
 //------------------------------------------------------------
-void particle::setInitialCondition(float px, float py, float vx, float vy, float angle){
+void particle::setInitialCondition(float px, float py, float vx, float vy){
     pos.set(px,py);
 	vel.set(vx,vy);
-    startAngle = angle;
 }
 
 //------------------------------------------------------------
@@ -48,14 +47,33 @@ void particle::update(){
 
 //------------------------------------------------------------
 void particle::draw(){
+    // polygon > circle
     if (shape>6) {
         shape = 100;
     }
+    
+    
+	ofPoint temp;
+	temp.x = pos.x;
+	temp.y = pos.y;
+	points.push_back(temp);
+	if (points.size() > 10){
+		points.erase(points.begin());
+	}
+    
+	ofNoFill();
+    ofSetColor(particleColor);
+	ofBeginShape();
+	for (int i = 0; i < points.size(); i++){
+		ofVertex(points[i].x, points[i].y);
+	}
+	ofEndShape();
+    
+    ofFill();
     ofSetCircleResolution(shape);
     ofPushMatrix();
         ofTranslate(pos.x, pos.y);
-        ofRotate(startAngle);
-        ofSetColor(particleColor);
+        ofRotate(angle + ofGetElapsedTimef()*angle);
         ofCircle(0, 0, size);
     ofPopMatrix();
     ofSetCircleResolution(100);

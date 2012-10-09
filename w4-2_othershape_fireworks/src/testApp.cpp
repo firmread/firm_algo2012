@@ -26,7 +26,7 @@ void testApp::setup(){
         myParticle.particleColor = c;
         
         myParticle.shape = ofRandom(3,8);
-        myParticle.size = ofRandom(1,20);
+        myParticle.size = abs(r)*2;
 		myParticle.setInitialCondition(300,300,vx, vy, angle);
 
 		myParticle.damping = ofRandom(0.01, 0.05);
@@ -47,7 +47,7 @@ void testApp::update(){
 	
 	for (int i = 0; i < particles.size(); i++){
 		particles[i].resetForce();
-		particles[i].addForce(0,0.04);  // gravity
+		particles[i].addForce(0,0.15);  // gravity
 		particles[i].addDampingForce();
 		particles[i].update();
 	}
@@ -60,7 +60,6 @@ void testApp::draw(){
 	for (int i = 0; i < particles.size(); i++){
 		particles[i].draw();
 	}
-    ofCircle(10, 10, 10);
 
 }
 
@@ -99,7 +98,7 @@ void testApp::mousePressed(int x, int y, int button){
         particles[i].particleColor = c;
         
         particles[i].shape = ofRandom(3,8);
-        particles[i].size = ofRandom(1,20);
+        particles[i].size = abs(r)*2.2;
 		particles[i].setInitialCondition(mouseX,mouseY,vx, vy, angle);
 	
 	}
