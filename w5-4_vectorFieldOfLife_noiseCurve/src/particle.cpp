@@ -93,7 +93,7 @@ void particle::draw(){
 	}
 	ofEndShape();
    
-    //
+    //get the angle by compare with previous position
     float dx = pos.x - prevPos.x;
     float dy = pos.y - prevPos.y;
     
@@ -104,6 +104,7 @@ void particle::draw(){
     
     
     ofFill();
+    //change circle into triangle
     ofSetCircleResolution(shape);
     ofPushMatrix();
         ofTranslate(pos.x, pos.y);

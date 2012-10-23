@@ -51,7 +51,6 @@ void testApp::update(){
 
     if (ofGetElapsedTimeMillis()%200 < 30) {
         VF.randomizeField(4.0);
-        second = ofGetSeconds();
     }
     
     VF.addClockwiseCircle(ofGetWidth()/2, ofGetHeight()/2, ofGetWidth(), 0.9f);

@@ -49,7 +49,7 @@ void testApp::update(){
 	
 	
 	if (bFade == true) VF.fadeField(0.99f);
-    VF.noiseField(0.1, 100.0, 5, true);
+    VF.noiseField(0.8, 100.0, 5, true);
     
     ofSetWindowTitle("framerate :" + ofToString(int(ofGetFrameRate())));
 }

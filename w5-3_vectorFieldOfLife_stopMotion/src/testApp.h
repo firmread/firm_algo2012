@@ -28,7 +28,6 @@ class testApp : public ofSimpleApp{
 	
 		int drawingStyle;
 		bool bFade,moveleft,moveright;
-        int second;
 	
 };
 
