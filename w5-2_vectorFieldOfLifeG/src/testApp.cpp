@@ -10,7 +10,7 @@ void testApp::setup(){
     ofEnableAlphaBlending();
 	
 	
-	for (int i = 0; i < 1000; i++){
+	for (int i = 0; i < 2000; i++){
 		particle myParticle;
 		myParticle.setInitialCondition(ofRandom(0,ofGetWidth()),ofRandom(0,ofGetHeight()),0,0);
 		particles.push_back(myParticle);
