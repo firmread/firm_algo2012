@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp
+  spec="1.0+"
+  codebase="http://sodaplay.com"
+  >
+  	<information>
+	    <title>dancingsth</title>
+	    <vendor>Sodaplay user 'firmread'.</vendor>
+	    <homepage href="/creators/firmread/items/dancingsth"/>
+	    <description></description>
+	
+	    <description kind="short">dancingsth</description>
+	    <!--
+	    <offline-allowed/>
+	    -->
+    </information>
+
+	<resources>
+	    <j2se version="1.5+"/>
+	  	<jar href="/lib/playforge-app-runtime.jar"/>
+	  	<jar href="/lib/playforge-app-core.jar"/>
+	  	<jar href="/lib/playforge-base.jar"/>
+	  	<jar href="/lib/playforge-web-uri.jar"/>
+	  	<jar href="/lib/playforge-app-http.jar"/>
+		
+  		<jar href="/lib/creators/soda/items/constructor/latest.jar"/>
+  		  	
+	    <jar href="/lib/jdom.jar"/>
+	    <jar href="/lib/commons-logging.jar"/>
+	 </resources>
+	 <application-desc main-class="net.playforge.app.base.Launch">
+	    <argument>-store=http://sodaplay.com</argument>
+		<argument>-session=975608FBD5C5558B4410D5F01819D991;firmread</argument>
+	    <argument>-launchdesc=  Constructor
+ </argument>
+	    <argument>-launchcomponentids=1142
+</argument>
+	    <argument>-app=com.sodaplay.soda.constructor2.ConstructorApplication</argument>
+	    <argument>-context=FORGIVING</argument>
+	    <argument>-model=firmread/dancingsth</argument>
+		<argument>classpath:/com/sodaplay/soda/constructor2/Constructor.xml</argument>
+	</application-desc>
+</jnlp>
