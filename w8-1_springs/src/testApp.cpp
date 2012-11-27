@@ -225,7 +225,7 @@ void testApp::update(){
 	// then update
     
     //start delay to see bouncy jump start
-    if (ofGetElapsedTimeMillis()>1000) {
+    if (ofGetElapsedTimeMillis()>250) {
         for (int i = 0; i < particles.size(); i++){
             particles[i].resetForce();
         }
@@ -345,12 +345,14 @@ void testApp::draw(){
         }
         
         ofNoFill();
-        ofSetColor(255);
+        ofSetColor(255,50);
+        ofSetLineWidth(3);
         ofBeginShape();
         for (int i = 0; i < trail.size(); i++){
             ofCurveVertex(trail[i].x, trail[i].y);
         }
         ofEndShape();
+        ofSetLineWidth(1);
         ofDisableSmoothing();
     ofPopMatrix();
 
