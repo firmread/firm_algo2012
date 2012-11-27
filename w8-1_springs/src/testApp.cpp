@@ -14,7 +14,7 @@ void testApp::setup(){
     ofSetWindowShape(1200, 500);
 	
     randomInitial = 700;
-	int max = 4;
+	int max = 7;
 	for (int i = 0; i < max; i++){
 		particle myParticle;
         
@@ -47,15 +47,74 @@ void testApp::setup(){
 		particles.push_back(myParticle);
 	}
 	
-	for (int i = 0; i < (particles.size()-1); i++){
-		spring mySpring;
-		mySpring.distance		= 25*(i+1);
-		mySpring.springiness	= 0.4f;
-		mySpring.particleA = & (particles[i]);
-		mySpring.particleB = & (particles[(i+1)%particles.size()]);
-		springs.push_back(mySpring);
-	}
+    spring mySpring;
+
+    
+    //shape line
+    mySpring.distance		= 25;
+    mySpring.springiness	= 0.4f;
+    mySpring.particleA = & (particles[0]);
+    mySpring.particleB = & (particles[1]);
+    springs.push_back(mySpring);
+    
+    mySpring.distance		= 25;
+    mySpring.springiness	= 0.4f;
+    mySpring.particleA = & (particles[1]);
+    mySpring.particleB = & (particles[2]);
+    springs.push_back(mySpring);
+
+    mySpring.distance		= 25;
+    mySpring.springiness	= 0.4f;
+    mySpring.particleA = & (particles[2]);
+    mySpring.particleB = & (particles[3]);
+    springs.push_back(mySpring);
+    
+    mySpring.distance		= 25;
+    mySpring.springiness	= 0.4f;
+    mySpring.particleA = & (particles[3]);
+    mySpring.particleB = & (particles[4]);
+    springs.push_back(mySpring);
+    
+    mySpring.distance		= 25;
+    mySpring.springiness	= 0.4f;
+    mySpring.particleA = & (particles[4]);
+    mySpring.particleB = & (particles[5]);
+    springs.push_back(mySpring);
+    
+    mySpring.distance		= 25;
+    mySpring.springiness	= 0.4f;
+    mySpring.particleA = & (particles[5]);
+    mySpring.particleB = & (particles[0]);
+    springs.push_back(mySpring);
+    
+    //tail line
+    mySpring.distance		= 100;
+    mySpring.springiness	= 0.4f;
+    mySpring.particleA = & (particles[5]);
+    mySpring.particleB = & (particles[6]);
+    springs.push_back(mySpring);
+
+    
+    //diagnal line
+	mySpring.distance		= 100;
+	mySpring.springiness	= 0.2f;
+	mySpring.particleA = & (particles[0]);
+	mySpring.particleB = & (particles[3]);
+	springs.push_back(mySpring);
 	
+	mySpring.distance		= 100;
+	mySpring.springiness	= 0.2f;
+	mySpring.particleA = & (particles[1]);
+	mySpring.particleB = & (particles[4]);
+	springs.push_back(mySpring);
+    
+	mySpring.distance		= 100;
+	mySpring.springiness	= 0.2f;
+	mySpring.particleA = & (particles[2]);
+	mySpring.particleB = & (particles[5]);
+	springs.push_back(mySpring);
+	
+
 	//particles[particles.size()-1].bFixed = true;
 	
 }
@@ -165,6 +224,7 @@ void testApp::draw(){
 
 
         //draw spring
+        ofEnableSmoothing();
         ofSetColor(0xffffff);
         for (int i = 0; i < particles.size(); i++){
             particles[i].draw();
@@ -180,6 +240,7 @@ void testApp::draw(){
             ofCurveVertex(trail[i].x, trail[i].y);
         }
         ofEndShape();
+        ofDisableSmoothing();
     ofPopMatrix();
 
 }
@@ -235,16 +296,16 @@ void testApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void testApp::mouseDragged(int x, int y, int button){
-	particles[0].pos.set(mouseX, mouseY);
+	particles[2].pos.set(mouseX, mouseY);
 }
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-	particles[0].bFixed = true;
+	particles[2].bFixed = true;
 }
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(){
-	particles[0].bFixed = false;
+	particles[2].bFixed = false;
 }
 
