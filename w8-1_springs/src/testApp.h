@@ -30,7 +30,7 @@ class testApp : public ofSimpleApp{
 		vector < ofPoint > trail;
 	
         int randomInitial;
-		 
+        float skinLength1, skinLength2;
 	
 };
 

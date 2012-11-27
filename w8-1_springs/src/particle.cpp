@@ -4,7 +4,7 @@
 //------------------------------------------------------------
 particle::particle(){
 	setInitialCondition(0,0,0,0);
-	damping = 0.2f;
+	damping = 0.1f;
 	bFixed = false;
 }
 
