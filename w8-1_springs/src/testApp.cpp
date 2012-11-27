@@ -4,13 +4,16 @@
 //--------------------------------------------------------------
 void testApp::setup(){	
 	
-    ofEnableSmoothing();
+//    ofEnableSmoothing();
+    ofEnableAlphaBlending();
 	ofBackground(0,0,0);
 	
 	ofSetVerticalSync(true);
 	ofSetFrameRate(60);
+    
+    ofSetWindowShape(1200, 500);
 	
-    randomInitial = 500;
+    randomInitial = 700;
 	int max = 4;
 	for (int i = 0; i < max; i++){
 		particle myParticle;
@@ -46,7 +49,7 @@ void testApp::setup(){
 	
 	for (int i = 0; i < (particles.size()-1); i++){
 		spring mySpring;
-		mySpring.distance		= 25;
+		mySpring.distance		= 25*(i+1);
 		mySpring.springiness	= 0.4f;
 		mySpring.particleA = & (particles[i]);
 		mySpring.particleB = & (particles[(i+1)%particles.size()]);
@@ -135,24 +138,49 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	
+    
+    ofPushMatrix();
+    ofTranslate(0, 0, -200);
+    
+        ofPushMatrix();
+        ofTranslate(0, 0, 100);
+            //draw frame
+            ofFill();    
+            int frameSize = 100;
+            int lineOffset = 10;
+            int offset = 50;
+            ofSetLineWidth(20);
+            for (int i = 0; i<frameSize; i++) {
+                ofSetColor(ofMap(i, frameSize, 0, 0, 200), 150);
+                ofLine(-offset, 0, -i*lineOffset, ofGetWidth()+offset, 0, -i*lineOffset);
+            }
+        
+            for (int i = 0; i<frameSize; i++) {
+                ofSetColor(ofMap(i, frameSize, 0, 0, 200), 150);
+                ofLine(-offset, ofGetHeight(), -i*lineOffset, ofGetWidth()+offset, ofGetHeight(), -i*lineOffset);
+            }
+            ofSetLineWidth(1);
+        ofPopMatrix();
+    
 
-	ofSetColor(0xffffff);
-	
-	for (int i = 0; i < particles.size(); i++){
-		particles[i].draw();
-	}
-	
-	for (int i = 0; i < springs.size(); i++){
-		springs[i].draw();
-	}
-	
-	ofNoFill();
-	ofBeginShape();
-	for (int i = 0; i < trail.size(); i++){
-		ofVertex(trail[i].x, trail[i].y);
-	}
-	ofEndShape();
+
+        //draw spring
+        ofSetColor(0xffffff);
+        for (int i = 0; i < particles.size(); i++){
+            particles[i].draw();
+        }
+        for (int i = 0; i < springs.size(); i++){
+            springs[i].draw();
+        }
+        
+        ofNoFill();
+        ofSetColor(255);
+        ofBeginShape();
+        for (int i = 0; i < trail.size(); i++){
+            ofCurveVertex(trail[i].x, trail[i].y);
+        }
+        ofEndShape();
+    ofPopMatrix();
 
 }
 
