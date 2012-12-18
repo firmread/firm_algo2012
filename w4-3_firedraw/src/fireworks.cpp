@@ -11,7 +11,7 @@
 void fireworks::setup(){
     int basePoint = ofRandom(235);
     int eachr = ofRandom(5,20);
-	for (int i = 0; i < 500; i++){
+	for (int i = 0; i < 100; i++){
 		particle myParticle;
         float r = ofRandom(-eachr,eachr);
         float angle = ofRandom(180);
